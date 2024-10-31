@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0FF0B1B3-2F77-40F4-8B7A-88A5024018B6"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6B127010-B07B-42F0-BC35-397584FC7F50"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWeatherVIPER/beginPage/onBoardingSecondVC/onBoardingSecondView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "setComponent()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AAF873E9-DBFC-4B0E-B11D-19A3F7738053"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWeatherVIPER/beginPage/onBoardingSecondVC/onBoardingSecondView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "setComponent()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6537028A-8CAD-4073-9A39-21106CA9F0AB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppWeatherVIPER/feature/CoinPage/CoinRouter.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "CoinRouter"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "6537028A-8CAD-4073-9A39-21106CA9F0AB - 3bf15f093feef58a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppWeatherVIPER.CoinRouter.__allocating_init() -&gt; AppWeatherVIPER.CoinRouter"
+                  moduleName = "AppWeatherVIPER"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleph/Documents/LearnIOS_Programming/AppWeatherVIPER/AppWeatherVIPER/feature/CoinPage/CoinRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "6537028A-8CAD-4073-9A39-21106CA9F0AB - bf2e8cd4103f9b38"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppWeatherVIPER.CoinRouter.deinit"
+                  moduleName = "AppWeatherVIPER"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleph/Documents/LearnIOS_Programming/AppWeatherVIPER/AppWeatherVIPER/feature/CoinPage/CoinRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  uuid = "6537028A-8CAD-4073-9A39-21106CA9F0AB - 6a2bc46dd4d87ec7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppWeatherVIPER.CoinRouter.__deallocating_deinit"
+                  moduleName = "AppWeatherVIPER"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleph/Documents/LearnIOS_Programming/AppWeatherVIPER/AppWeatherVIPER/feature/CoinPage/CoinRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "6537028A-8CAD-4073-9A39-21106CA9F0AB - 7946b84bf215cd22"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AppWeatherVIPER.CoinRouter.init() -&gt; AppWeatherVIPER.CoinRouter"
+                  moduleName = "AppWeatherVIPER"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aleph/Documents/LearnIOS_Programming/AppWeatherVIPER/AppWeatherVIPER/feature/CoinPage/CoinRouter.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

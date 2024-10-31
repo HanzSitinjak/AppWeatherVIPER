@@ -1,0 +1,10 @@
+excluded:
+  - Tests
+  - Pods
+disabled_rules:
+  - force_unwrapping
+  - trailing_whitespace 
+  - comment_spacing
+  - type_name
+  - line_length
+  - identifier_name
