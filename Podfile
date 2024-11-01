@@ -9,5 +9,10 @@ target 'AppWeatherVIPER' do
   pod 'Kingfisher', '~> 7.0'
   pod 'SwiftyJSON', '~> 5.0'
   pod 'Alamofire', '~> 5.6'
-
+  
+  target 'AppWeatherVIPERTests' do
+    inherit! :search_paths
+    pod 'Quick'
+    pod 'Nimble'
+  end
 end

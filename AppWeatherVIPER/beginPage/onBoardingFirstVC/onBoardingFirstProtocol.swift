@@ -7,16 +7,15 @@
 
 import Foundation
 
-protocol onBoardingFirstProtocol: AnyObject{
+protocol onBoardingFirstProtocol: AnyObject {
     func setupInitialState()
 }
 
-protocol onBoardingFirstRouterProtocol: AnyObject{
+protocol onBoardingFirstRouterProtocol: AnyObject {
     func toOnBoarding2Page()
 }
 
-protocol onBoardingFirstPreProtocol{
+protocol onBoardingFirstPreProtocol {
     func viewDidLoad()
     func nextButtonTapped()
 }
-
