@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-protocol homePageViewProtocol: AnyObject{
+protocol homePageViewProtocol: AnyObject {
     var presenterView: homePagePreProtocol? {get set}
     
-    func showUsername()
+    func showUsername(usernames: [String])
 //    func showWeatherData(_ data: [LokasiInfo])
     func showError(_ message: String)
     func updateData(lokasiInfo: [LokasiInfo],cuacaInfo: [WeatherInfo])
@@ -28,17 +28,18 @@ protocol homePagePreProtocol:AnyObject{
     var interactor: homePageInteractorProtocol? {get set}
     
     func itemContent(weatherInfo: WeatherInfo, index: Int) -> UIView
-    func fetchUsername() -> [String]
     func getWeatherAPI()
     func fetchItems(weatherData: [WeatherInfo]) -> [UIView]
     func itemContentPlaceholder(index: Int) -> UIView
     func getInfoTapped()
+    func getUsername()
     
 }
 
 protocol homePageInteractorProtocol: AnyObject{
     var presenterInteractor: homePagePreProtocol? {get set}
     func fetchWeatherAPI(completion: @escaping (Result<([LokasiInfo],[WeatherInfo]), Error>) -> Void)
+    func fetchUsername() -> [String]
 }
 
 protocol homePageRouterProtocol:AnyObject{

@@ -30,39 +30,27 @@ class homePageView: UIViewController, homePageViewProtocol {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         setupScrollView()
-        showUsername()
+        presenterView?.getUsername()
         presenterView?.getWeatherAPI()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
         setupIconNewsButton()
     }
     
     func setupIconNewsButton() {
-        iconNews.setImage(UIImage(named: "iconNews"), for: .normal) // Gambar icon
-//        iconNews.setTitle("News", for: .normal) // Teks di bawah icon
-//        iconNews.titleLabel?.font = UIFont.systemFont(ofSize: 12)
-//        iconNews.setTitleColor(.white, for: .normal)
-
-        // Atur posisi teks dan gambar agar vertikal dan rata tengah
+        iconNews.setImage(UIImage(named: "iconNews"), for: .normal)
         iconNews.contentVerticalAlignment = .center
         iconNews.contentHorizontalAlignment = .center
         iconNews.imageView?.contentMode = .scaleAspectFit
-
-        // Sesuaikan posisi teks terhadap gambar
-//        iconNews.titleEdgeInsets = UIEdgeInsets(top: 8, left: -iconNews.imageView!.frame.size.width, bottom: -40, right: 0)
         iconNews.imageEdgeInsets = UIEdgeInsets(top: -10, left: 0, bottom: 10, right:0)
         iconNews.addTarget(presenterView, action: #selector(homePagePresenter.getInfoTapped), for: .touchUpInside)
     }
     
     private func setupScrollView() {
-        // Atur scrollBox untuk menggulir horizontal
         scrollBox.showsHorizontalScrollIndicator = true
         scrollBox.showsVerticalScrollIndicator = false
-        
-        // Tambahkan contentView ke dalam scrollBox
         scrollBox.addSubview(contentView)
         contentView.translatesAutoresizingMaskIntoConstraints = false
-
-        // Atur constraint agar contentView mengikuti ukuran scrollBox
+        
         NSLayoutConstraint.activate([
             contentView.topAnchor.constraint(equalTo: scrollBox.topAnchor),
             contentView.leadingAnchor.constraint(equalTo: scrollBox.leadingAnchor),
@@ -72,13 +60,11 @@ class homePageView: UIViewController, homePageViewProtocol {
         ])
     }
 
-    func showUsername() {
-        let usernames = presenterView?.fetchUsername()
-        usernameLabel.text = usernames?.last ?? "Tidak ada username"
+    func showUsername(usernames: [String]) {
+        usernameLabel.text = usernames.last ?? "Tidak ada username"
     }
 
     func showScrollBox(weatherData: [WeatherInfo]?) {
-        // Hapus semua subviews sebelum menambahkan item baru
         contentView.subviews.forEach { $0.removeFromSuperview() }
 
         let items: [UIView]
@@ -88,14 +74,12 @@ class homePageView: UIViewController, homePageViewProtocol {
                 presenterView?.itemContent(weatherInfo: weatherInfo, index: 0) ?? UIView()
             }
         } else {
-            // Jika tidak ada data, tambahkan placeholder
             let placeholderCount = 22
             items = (0..<placeholderCount).map { index in
                 presenterView?.itemContentPlaceholder(index: index) ?? UIView()
             }
         }
 
-        // Tambahkan item-item ke contentView dan atur constraint dinamis
         var previousView: UIView?
         for (index, item) in items.enumerated() {
             contentView.addSubview(item)
@@ -108,7 +92,6 @@ class homePageView: UIViewController, homePageViewProtocol {
                 item.topAnchor.constraint(equalTo: contentView.topAnchor)
             ])
 
-            // Menambahkan Gesture Recognizer
             let tapGesture = UITapGestureRecognizer(target: presenterView, action: #selector(homePagePresenter.itemTapped(_:)))
             item.addGestureRecognizer(tapGesture)
             item.isUserInteractionEnabled = true  // Pastikan item dapat berinteraksi
@@ -117,7 +100,6 @@ class homePageView: UIViewController, homePageViewProtocol {
         }
 
         if let lastView = previousView {
-            // Set trailing agar contentView menyesuaikan panjang total item
             contentView.trailingAnchor.constraint(equalTo: lastView.trailingAnchor).isActive = true
         }
     }

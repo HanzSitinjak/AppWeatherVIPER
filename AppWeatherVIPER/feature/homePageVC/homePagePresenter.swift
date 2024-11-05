@@ -10,23 +10,14 @@ import UIKit
 import CoreData
 
 class homePagePresenter: homePagePreProtocol{
-    
     weak var view: homePageViewProtocol?
     var router: homePageRouterProtocol?
     var interactor: homePageInteractorProtocol?
     var detailCuaca: [WeatherInfo] = []
     
-    final func fetchUsername() -> [String] {
-        var usernames: [String] = []
-        let context = CoreDataManager.shared.context
-        let fetchRequest: NSFetchRequest<AppUser> = AppUser.fetchRequest()
-        do{
-            let result = try context.fetch(fetchRequest)
-            usernames = result.compactMap{$0.username}
-        }catch{
-            print("Gagal mengambil username!: \(error.localizedDescription)")
-        }
-        return usernames
+    func getUsername(){
+        let usernames = interactor?.fetchUsername() ?? []
+        view?.showUsername(usernames: usernames)
     }
     
     func itemContent(weatherInfo: WeatherInfo, index: Int) -> UIView{

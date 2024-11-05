@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 //import Alamofire
 //import SwiftyJSON
 
@@ -14,6 +15,21 @@ class HomePageInteractor: homePageInteractorProtocol {
     weak var presenterInteractor: homePagePreProtocol?
     private var lokasiDetails: [LokasiInfo] = []
     private var cuacaDetails: [WeatherInfo] = []
+    
+    final func fetchUsername() -> [String] {
+        var usernames: [String] = []
+        let context = CoreDataManager.shared.context
+        let fetchRequest: NSFetchRequest<AppUser> = AppUser.fetchRequest()
+        
+        do{
+            let result = try context.fetch(fetchRequest)
+            usernames = result.compactMap{$0.username}
+        }catch{
+            print("Gagal mengambil username!: \(error.localizedDescription)")
+        }
+        return usernames
+    }
+    
     final func fetchWeatherAPI(completion: @escaping (Result<([LokasiInfo],[WeatherInfo]), Error>) -> Void) {
         let urlData = "https://api.bmkg.go.id/publik/prakiraan-cuaca?adm4=31.74.05.1001"
         guard let url = URL(string: urlData) else { return }
