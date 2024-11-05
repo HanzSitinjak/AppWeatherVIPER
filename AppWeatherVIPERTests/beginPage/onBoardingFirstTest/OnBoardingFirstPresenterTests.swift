@@ -5,60 +5,55 @@
 //  Created by Aleph-AHV2D on 01/11/24.
 //
 
-// OnBoardingFirstPresenterTests.swift
 import XCTest
-// OnBoardingFirstPresenterTests.swift
-import Quick
 import Nimble
+import Quick
 @testable import AppWeatherVIPER
 
 class OnBoardingFirstPresenterTests: QuickSpec {
-    override class func spec() {
-        describe("OnBoardingFirstPresenter") {
+    override class func spec(){
+        describe("Testing unit untuk presenter FirstOnBoarding!"){
+            var routerOnBoardingFirst: mockOnBoardingRouter!
+            var viewOnBoardingFirst: mockOnBoardingView!
             var sut: onBoardingFirstPresenter!
-            var mockView: MockOnBoardingFirstProtocol!
-            var mockRouter: MockOnBoardingFirstRouterProtocol!
-
+            
             beforeEach {
+                //Persiapan komponen dan relation untuk contexy nanti.
                 sut = onBoardingFirstPresenter()
-                mockView = MockOnBoardingFirstProtocol()
-                mockRouter = MockOnBoardingFirstRouterProtocol()
+                viewOnBoardingFirst = mockOnBoardingView()
+                routerOnBoardingFirst = mockOnBoardingRouter()
                 
-                sut.view = mockView
-                sut.router = mockRouter
+                sut.view = viewOnBoardingFirst
+                sut.router = routerOnBoardingFirst
             }
-
-            context("when viewDidLoad is called") {
-                it("should call setupInitialState on the view") {
+            
+            context("Test uji koneksi Presenter -> View!!"){
+                it("Hasil test case Presenter -> View"){
                     sut.viewDidLoad()
-                    expect(mockView.setupInitialStateCalled).to(beTrue())
+                    expect(viewOnBoardingFirst.isViewSuccess).to(beTrue())
                 }
             }
-
-            context("when nextButtonTapped is called") {
-                it("should call toOnBoarding2Page on the router") {
+            
+            context("Test uji koneksi Presenter -> Router!!"){
+                it("Hasil test case Presenter -> Router"){
                     sut.nextButtonTapped()
-                    expect(mockRouter.toOnBoarding2PageCalled).to(beTrue())
+                    expect(routerOnBoardingFirst.isBtnIsConnection).to(beTrue())
                 }
             }
         }
     }
-}
-
-// Mock untuk view
-class MockOnBoardingFirstProtocol: onBoardingFirstProtocol {
-    var setupInitialStateCalled = false
     
-    func setupInitialState() {
-        setupInitialStateCalled = true
+    class mockOnBoardingView: onBoardingFirstProtocol {
+        var isViewSuccess = false
+        func setupInitialState() {
+            isViewSuccess = true
+        }
     }
-}
-
-// Mock untuk router
-class MockOnBoardingFirstRouterProtocol: onBoardingFirstRouterProtocol {
-    var toOnBoarding2PageCalled = false
     
-    func toOnBoarding2Page() {
-        toOnBoarding2PageCalled = true
+    class mockOnBoardingRouter: onBoardingFirstRouterProtocol{
+        var isBtnIsConnection = false
+        func toOnBoarding2Page() {
+            isBtnIsConnection = true
+        }
     }
 }

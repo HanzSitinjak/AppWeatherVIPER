@@ -12,35 +12,31 @@ import Nimble
 
 class OnBoardingFirstViewTests: QuickSpec {
     override class func spec() {
-        describe("OnBoardingFirstView") {
+        describe("Pengujian View OnBoarding1!") {
             var sut: onBoardingFirst!
-
+            
             beforeEach {
                 sut = onBoardingFirst()
             }
-
-            context("when viewDidLoad is called") {
-                it("should call presenter viewDidLoad") {
-                    let mockPresenter = MockOnBoardingFirstPreProtocol()
+            
+            context("Uji Coba View onBoardingFirst()!") {
+                it("onBoardingfirstView ditampilkan!!") {
+                    let mockPresenter = MockPresenterProtocol()
                     sut.presenter = mockPresenter
                     
                     sut.viewDidLoad()
-                    
-                    expect(mockPresenter.viewDidLoadCalled).to(beTrue())
+                    expect(mockPresenter.isViewShow).to(beTrue())
                 }
             }
         }
+        
+        class MockPresenterProtocol: onBoardingFirstPreProtocol {
+            var isViewShow = false
+            func viewDidLoad() {
+                isViewShow = true
+            }
+            
+            func nextButtonTapped() {}
+        }
     }
 }
-
-// Mock untuk presenter
-class MockOnBoardingFirstPreProtocol: onBoardingFirstPreProtocol {
-    var viewDidLoadCalled = false
-    
-    func viewDidLoad() {
-        viewDidLoadCalled = true
-    }
-    
-    func nextButtonTapped() {}
-}
-

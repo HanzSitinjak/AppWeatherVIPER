@@ -46,14 +46,7 @@ class onBoardingSecondRouter: onBoardingSecondRouterProtocol{
     }
     
     func toHomePageBtn() {
-        
-        
         viewController?.navigationController?.pushViewController(homePageRouter.createModule(), animated: true)
-        
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        if let testScrollView = storyboard.instantiateViewController(withIdentifier: "testScrollView") as? testScrollView{
-//            viewController?.navigationController?.pushViewController(testScrollView, animated: true)
-//        }
     }
 }
 

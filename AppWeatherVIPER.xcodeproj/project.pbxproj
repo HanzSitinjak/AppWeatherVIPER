@@ -11,6 +11,7 @@
 		1842FC7D4EF8A40BB6BB4DBE /* Pods_AppWeatherVIPER.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB613649A6B498D9DD7D98B /* Pods_AppWeatherVIPER.framework */; };
 		861B17412CD4D59E00F02C0E /* OnBoardingFirstPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861B17402CD4D59E00F02C0E /* OnBoardingFirstPresenterTests.swift */; };
 		861B17432CD4D5C000F02C0E /* OnBoardingFirstRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861B17422CD4D5C000F02C0E /* OnBoardingFirstRouterTests.swift */; };
+		861B17462CD8A2A900F02C0E /* onBoardingSecondViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861B17452CD8A2A900F02C0E /* onBoardingSecondViewTest.swift */; };
 		861F0D0F2CC0C184007BDF95 /* onBoardingFirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861F0D0E2CC0C184007BDF95 /* onBoardingFirstView.swift */; };
 		861F0D112CC0C195007BDF95 /* onBoardingFirstPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861F0D102CC0C195007BDF95 /* onBoardingFirstPresenter.swift */; };
 		861F0D172CC0C1C1007BDF95 /* onBoardingFirstProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861F0D162CC0C1C1007BDF95 /* onBoardingFirstProtocol.swift */; };
@@ -60,6 +61,8 @@
 		86FDBE8A2CC00F010094AFCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86FDBE882CC00F010094AFCD /* Main.storyboard */; };
 		86FDBE8C2CC00F040094AFCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86FDBE8B2CC00F040094AFCD /* Assets.xcassets */; };
 		86FDBE8F2CC00F040094AFCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86FDBE8D2CC00F040094AFCD /* LaunchScreen.storyboard */; };
+		86FF81272CD8CA04002A5D9F /* onBoardingSecondPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF81262CD8CA04002A5D9F /* onBoardingSecondPresenterTest.swift */; };
+		86FF81292CD8DAB7002A5D9F /* onBoardingSecondRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FF81282CD8DAB7002A5D9F /* onBoardingSecondRouterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +81,7 @@
 		69FBBAFF52293D30F4D9D0D3 /* Pods_AppWeatherVIPERTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppWeatherVIPERTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		861B17402CD4D59E00F02C0E /* OnBoardingFirstPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFirstPresenterTests.swift; sourceTree = "<group>"; };
 		861B17422CD4D5C000F02C0E /* OnBoardingFirstRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingFirstRouterTests.swift; sourceTree = "<group>"; };
+		861B17452CD8A2A900F02C0E /* onBoardingSecondViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingSecondViewTest.swift; sourceTree = "<group>"; };
 		861F0D0E2CC0C184007BDF95 /* onBoardingFirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingFirstView.swift; sourceTree = "<group>"; };
 		861F0D102CC0C195007BDF95 /* onBoardingFirstPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingFirstPresenter.swift; sourceTree = "<group>"; };
 		861F0D162CC0C1C1007BDF95 /* onBoardingFirstProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingFirstProtocol.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 		86FDBE8B2CC00F040094AFCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86FDBE8E2CC00F040094AFCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86FDBE902CC00F040094AFCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86FF81262CD8CA04002A5D9F /* onBoardingSecondPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingSecondPresenterTest.swift; sourceTree = "<group>"; };
+		86FF81282CD8DAB7002A5D9F /* onBoardingSecondRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onBoardingSecondRouterTest.swift; sourceTree = "<group>"; };
 		948B005E292D86DA7EC100A7 /* Pods-AppWeatherVIPER.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWeatherVIPER.debug.xcconfig"; path = "Target Support Files/Pods-AppWeatherVIPER/Pods-AppWeatherVIPER.debug.xcconfig"; sourceTree = "<group>"; };
 		CAB613649A6B498D9DD7D98B /* Pods_AppWeatherVIPER.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppWeatherVIPER.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFA0605012B0CA2CE61809A1 /* Pods-AppWeatherVIPERTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppWeatherVIPERTests.debug.xcconfig"; path = "Target Support Files/Pods-AppWeatherVIPERTests/Pods-AppWeatherVIPERTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,6 +161,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		861B17442CD87DB500F02C0E /* onBoardingSecondTest */ = {
+			isa = PBXGroup;
+			children = (
+				861B17452CD8A2A900F02C0E /* onBoardingSecondViewTest.swift */,
+				86FF81262CD8CA04002A5D9F /* onBoardingSecondPresenterTest.swift */,
+				86FF81282CD8DAB7002A5D9F /* onBoardingSecondRouterTest.swift */,
+			);
+			path = onBoardingSecondTest;
+			sourceTree = "<group>";
+		};
 		861F0D082CC0C0F3007BDF95 /* Component */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +268,7 @@
 		864AE7902CD4CF5700F53000 /* beginPage */ = {
 			isa = PBXGroup;
 			children = (
+				861B17442CD87DB500F02C0E /* onBoardingSecondTest */,
 				864AE7912CD4CFB100F53000 /* onBoardingFirstTest */,
 			);
 			path = beginPage;
@@ -563,9 +580,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86FF81292CD8DAB7002A5D9F /* onBoardingSecondRouterTest.swift in Sources */,
 				861B17412CD4D59E00F02C0E /* OnBoardingFirstPresenterTests.swift in Sources */,
+				86FF81272CD8CA04002A5D9F /* onBoardingSecondPresenterTest.swift in Sources */,
 				861B17432CD4D5C000F02C0E /* OnBoardingFirstRouterTests.swift in Sources */,
 				864AE7932CD4CFD900F53000 /* OnBoardingFirstViewTests.swift in Sources */,
+				861B17462CD8A2A900F02C0E /* onBoardingSecondViewTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,14 +7,13 @@
 
 import Foundation
 
-protocol onBoardingSecondProtocol: AnyObject{
+protocol onBoardingSecondProtocol: AnyObject {
     var connectViewToPresenter: onBoardingSecondPreProtocol? {get set}
-    func setComponent()
     func showAlert(message: String)
 //    func validateUsername(_ username: String)
 }
 
-protocol onBoardingSecondPreProtocol: AnyObject{
+protocol onBoardingSecondPreProtocol: AnyObject {
     var view: onBoardingSecondProtocol? {get set}
     var interactor: onBoardingSecondInteractorProtocol? {get set}
     var router: onBoardingSecondRouterProtocol? {get set}
@@ -27,6 +26,6 @@ protocol onBoardingSecondRouterProtocol: AnyObject {
     func toHomePageBtn()
 }
 
-protocol onBoardingSecondInteractorProtocol:AnyObject{
+protocol onBoardingSecondInteractorProtocol:AnyObject {
     var connectInteractorToPresenter: onBoardingSecondPreProtocol? {get set}
 }

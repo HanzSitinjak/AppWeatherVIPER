@@ -5,30 +5,30 @@
 //  Created by Aleph-AHV2D on 01/11/24.
 //
 
-import XCTest
-// OnBoardingFirstRouterTests.swift
 import Quick
 import Nimble
 @testable import AppWeatherVIPER
 
 class OnBoardingFirstRouterTests: QuickSpec {
     override class func spec() {
-        describe("OnBoardingFirstRouter") {
+        describe("Testing untuk Router:"){
             var sut: onBoardingFirstRouter!
-            var mockViewController: UIViewController!
-
+            var mockToView: UIViewController!
+            var navigationController: UINavigationController!
+        
             beforeEach {
                 sut = onBoardingFirstRouter()
-                mockViewController = UIViewController()
-                sut.viewController = mockViewController
+                mockToView = UIViewController()
+                navigationController = UINavigationController(rootViewController: mockToView)
+                
+                sut.viewController = mockToView
+                UIApplication.shared.keyWindow?.rootViewController = navigationController
             }
-
-            context("when navigating to OnBoarding2Page") {
-                it("should navigate to the second onboarding page") {
+            
+            context("Hasil Navigasi kehalaman toOnboarding 2:"){
+                it("Dapat berpindah ke onBoarding 2!"){
                     sut.toOnBoarding2Page()
-                    
-                    // Verifikasi bahwa viewController navigasi ke halaman yang benar
-                    expect(mockViewController.navigationController).toNot(beNil())
+                    expect(navigationController.topViewController).toEventually(beAnInstanceOf(onBoardingSecond.self))
                 }
             }
         }

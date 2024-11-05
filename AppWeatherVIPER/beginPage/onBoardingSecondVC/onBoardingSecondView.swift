@@ -25,6 +25,7 @@ class onBoardingSecond: UIViewController, onBoardingSecondProtocol{
     
     func setComponent() {
         //Ini modifikasi view utk textField
+        guard let textFieldUsername = textFieldUsername else { return }
         textFieldUsername.frame.size.height = 50
         textFieldUsername.setProperty(
             fontColor: UIColor(hex: "#9CE0FB")!,
