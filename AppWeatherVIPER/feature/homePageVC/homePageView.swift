@@ -45,7 +45,7 @@ class homePageView: UIViewController, homePageViewProtocol {
         iconNews.addTarget(presenterView, action: #selector(homePagePresenter.getInfoTapped), for: .touchUpInside)
     }
     
-    private func setupScrollView() {
+    func setupScrollView() {
         scrollBox.showsHorizontalScrollIndicator = true
         scrollBox.showsVerticalScrollIndicator = false
         scrollBox.addSubview(contentView)

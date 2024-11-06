@@ -27,15 +27,15 @@ class OnBoardingFirstPresenterTests: QuickSpec {
                 sut.router = routerOnBoardingFirst
             }
             
-            context("Test uji koneksi Presenter -> View!!"){
-                it("Hasil test case Presenter -> View"){
+            context("Test uji koneksi Presenter -> View!!") {
+                it("Hasil test case Presenter -> View") {
                     sut.viewDidLoad()
                     expect(viewOnBoardingFirst.isViewSuccess).to(beTrue())
                 }
             }
             
-            context("Test uji koneksi Presenter -> Router!!"){
-                it("Hasil test case Presenter -> Router"){
+            context("Test uji koneksi Presenter -> Router!!") {
+                it("Hasil test case Presenter -> Router") {
                     sut.nextButtonTapped()
                     expect(routerOnBoardingFirst.isBtnIsConnection).to(beTrue())
                 }

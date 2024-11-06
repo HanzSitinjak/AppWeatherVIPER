@@ -5,7 +5,6 @@
 //  Created by Aleph-AHV2D on 05/11/24.
 //
 
-import XCTest
 import Nimble
 import Quick
 @testable import AppWeatherVIPER
@@ -42,6 +41,7 @@ final class homePagePresenterTest: QuickSpec {
                 context("Menguji apakah data API berhasil di-fetch pada ScrollBox view!") {
                     beforeEach {
                         mockInteractorController.mockWeatherInfo = [WeatherInfo(temperature: 23, humidity: 39, weather: 2, rainfall: 45.3, date: "2024-11-05", time: "07:00:00", arahAngin: 23, kecAngin: 11.3, totalCloudCover: 23.1, ketCuaca: "Sunny", desCuaca: "Cerah")]
+                        mockInteractorController.mockLocationInfo = [LokasiInfo(provinsi: "Aceh", kabupaten: "Nutilima", kecamatan: "Kuta Cane")]
                         sut.getWeatherAPI()
                     }
                     
@@ -53,10 +53,17 @@ final class homePagePresenterTest: QuickSpec {
                             }
                         }
                     }
-//                    it("Data cuaca berhasil di-update pada view!") {
-//                        sut.getWeatherAPI()
-//                        expect(mockViewController.updatedWeatherData?.first?.temperature).to(equal(23))
-//                    }
+                }
+                
+                context("menguji apakah data API untuk Lokasi dapat ditampilkan pada view"){
+                    it("Data lokasi API berhasil di fetch pada view"){
+                        waitUntil { done in
+                            DispatchQueue.main.async {
+                                expect(mockViewController.updateLocationInfo?.first?.provinsi).to(equal("Aceh"))
+                            }
+                            done()
+                        }
+                    }
                 }
             }
         
@@ -64,18 +71,19 @@ final class homePagePresenterTest: QuickSpec {
             var presenterView: homePagePreProtocol?
             var usernameLabel: UILabel = UILabel()
             var updatedWeatherData: [WeatherInfo]?
+            var updateLocationInfo: [LokasiInfo]?
 
             func showUsername(usernames: [String]) {
                 usernameLabel.text = usernames.last ?? "Tidak ada username"
             }
-            
             
             func showError(_ message: String) {
                 
             }
             
             func updateData(lokasiInfo: [LokasiInfo], cuacaInfo: [WeatherInfo]) {
-//
+                updateLocationInfo = lokasiInfo
+                updatedWeatherData = cuacaInfo
             }
             
             func showScrollBox(weatherData: [WeatherInfo]?) {
@@ -101,7 +109,7 @@ final class homePagePresenterTest: QuickSpec {
         
         class MockInteractor: homePageInteractorProtocol {
             var mockUsernames: [String] = ["Hans", "Anto"]
-            let mockLokasiInfo = [LokasiInfo(provinsi: "Aceh", kabupaten: "Nutilima", kecamatan: "Kuta Cane")]
+            var mockLocationInfo: [LokasiInfo] = []
             var mockWeatherInfo: [WeatherInfo] = []
             var presenterInteractor: homePagePreProtocol?
             
@@ -110,7 +118,7 @@ final class homePagePresenterTest: QuickSpec {
             }
             
             func fetchWeatherAPI(completion: @escaping (Result<([LokasiInfo], [WeatherInfo]), Error>) -> Void) {
-                completion(.success((mockLokasiInfo, mockWeatherInfo)))
+                completion(.success((mockLocationInfo, mockWeatherInfo)))
                 }
             }
         }
