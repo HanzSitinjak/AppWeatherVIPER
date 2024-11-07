@@ -11,7 +11,7 @@
 ## Keahlian
 
 - **Bahasa Pemrograman:** Swift, Kotlin, JavaScript
-- **Framework:** UIKit, SwiftUI, VIPER, CocoaPods
+- **Framework:** UIKit, SwiftUI, VIPER, CocoaPods, Laravel
 - **Tools:** Xcode, VSCode, Git, Postman
 - **Pengembangan Aplikasi:** Front-end Mobile Development (iOS), Integrasi API, Penggunaan CoreData
 
