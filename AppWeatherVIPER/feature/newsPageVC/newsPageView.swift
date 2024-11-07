@@ -41,7 +41,7 @@ class newsPageView: UIViewController, newsPageViewProtocol, UITableViewDelegate,
         tableView.estimatedRowHeight = 200
     }
 
-    private func loadNewsData() {
+    func loadNewsData() {
         items = presenterToView?.getDataNews() ?? []
         tableView.reloadData()
     }

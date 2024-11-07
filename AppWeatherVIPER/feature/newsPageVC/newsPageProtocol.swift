@@ -7,8 +7,10 @@
 
 import Foundation
 
-protocol newsPageViewProtocol: AnyObject{
+protocol newsPageViewProtocol: AnyObject {
     var presenterToView: newsPagePreProtocol? {get set}
+    
+    func loadNewsData()
 }
 
 protocol newsPagePreProtocol: AnyObject{
