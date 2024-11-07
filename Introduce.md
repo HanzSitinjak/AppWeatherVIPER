@@ -17,7 +17,7 @@
 
 ## Riwayat Pendidikan
 
-- **Sarjana Teknik Informatika** - Universitas Teknologi, 2018
+- **Sarjana Teknik Informatika** - Universitas Teknologi DEL, 2025
 
 ## Pengalaman Kerja
 
